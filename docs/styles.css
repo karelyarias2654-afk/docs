@@ -168,3 +168,8 @@ button:active {
         height: 100px;
     }
 }
+/* ===== COLOR ALTERNATIVO TARJETA ===== */
+.color-magico {
+    background-color: #ffe0f0;
+}
+
