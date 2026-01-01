@@ -136,4 +136,22 @@ function saludar() {
 function modoOscuro() {
     document.body.classList.toggle("dark");
 }
+// Cambia el color del fondo aleatoriamente
+function cambiarColor() {
+    const colores = [
+        "#fce4ec",
+        "#e3f2fd",
+        "#f3e5f5",
+        "#e8f5e9",
+        "#fffde7",
+        "#ede7f6"
+    ];
+
+    // Número aleatorio
+    const aleatorio = Math.floor(Math.random() * colores.length);
+
+    // Cambiamos el fondo
+    document.body.style.backgroundColor = colores[aleatorio];
+}
+
 
