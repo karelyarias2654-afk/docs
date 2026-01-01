@@ -103,3 +103,37 @@ function cambiarMensaje() {
     cambiado = !cambiado;
     animarMensaje();
 }
+// ===== JAVASCRIPT =====
+
+// Lista de mensajes (arreglo)
+const mensajes = [
+    "✨ Estoy programando mi primera página web ✨",
+    "💖 Amo aprender desarrollo web",
+    "🚀 Voy a ser desarrolladora de software",
+    "🧠 Programar es como resolver acertijos",
+    "🌈 Cada día aprendo algo nuevo"
+];
+
+// Variable para saber qué mensaje toca
+let indice = 0;
+
+// Cambia el mensaje cada vez que se presiona el botón
+function saludar() {
+    const texto = document.getElementById("mensaje");
+
+    texto.innerText = mensajes[indice];
+
+    // Avanza al siguiente mensaje
+    indice++;
+
+    // Si llega al final, vuelve al inicio
+    if (indice === mensajes.length) {
+        indice = 0;
+    }
+}
+
+// Activa o desactiva el modo oscuro
+function modoOscuro() {
+    document.body.classList.toggle("dark");
+}
+
