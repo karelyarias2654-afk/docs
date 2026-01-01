@@ -37,6 +37,11 @@ function cambiarColor() {
     ];
 
     const aleatorio = Math.floor(Math.random() * colores.length);
-    document.body.style.backgroundColor = colores[aleatorio];
+
+    // Cambiamos el color del CONTENEDOR
+    const contenedor = document.querySelector(".contenedor");
+    contenedor.style.backgroundColor = colores[aleatorio];
 }
+
+
 
