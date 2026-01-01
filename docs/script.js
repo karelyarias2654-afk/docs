@@ -27,6 +27,9 @@ function modoOscuro() {
 
 // Cambiar color de fondo
 function cambiarColor() {
+    // Quita temas activos
+    document.body.classList.remove("dark", "tema-azul");
+
     const colores = [
         "#fce4ec",
         "#e3f2fd",
@@ -44,5 +47,3 @@ function cambiarColor() {
         "important"
     );
 }
-
-
