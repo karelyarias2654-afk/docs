@@ -37,5 +37,12 @@ function cambiarColor() {
     ];
 
     const aleatorio = Math.floor(Math.random() * colores.length);
-    document.body.style.backgroundColor = colores[aleatorio];
+
+    document.body.style.setProperty(
+        "background-color",
+        colores[aleatorio],
+        "important"
+    );
 }
+
+
