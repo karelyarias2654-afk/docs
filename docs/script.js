@@ -55,5 +55,22 @@ function mostrarScroll() {
 
 window.addEventListener("scroll", mostrarScroll);
 mostrarScroll();
+// ===== EFECTO SCROLL =====
+const elementosScroll = document.querySelectorAll(".scroll");
+
+function mostrarAlScroll() {
+    elementosScroll.forEach(elemento => {
+        const posicion = elemento.getBoundingClientRect().top;
+        const alturaPantalla = window.innerHeight;
+
+        if (posicion < alturaPantalla - 100) {
+            elemento.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", mostrarAlScroll);
+window.addEventListener("load", mostrarAlScroll);
+
 
 
