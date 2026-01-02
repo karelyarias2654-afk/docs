@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- CONFIGURACIÓN -->
     <meta charset="UTF-8">
     <title>Mi primera página</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CONEXIÓN AL CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- CONTENIDO VISIBLE -->
 
     <div class="contenedor">
-        <img src="foto.jpg" alt="Foto de Karely" class="perfil">
 
-        <h1>Bienvenidos a mi primera página web</h1>
+        <!-- GALERÍA -->
+        <div class="galeria scroll">
+            <img src="foto.jpg" alt="Foto de Karely" class="perfil">
+            <img src="foto1.jpg">
+        </div>
 
-        <h2>Soy Karely 💖</h2>
-        <p>Estudiante y futura desarrolladora de software 🚀</p>
+        <!-- TEXTO -->
+        <h1 class="scroll">Bienvenidos a mi primera página web</h1>
 
-        <p id="mensaje">Estoy aprendiendo desarrollo web y me encanta 💖</p>
+        <h2 class="scroll">Soy Karely 💖</h2>
 
-       <button onclick="saludar()">Presióname</button>
-<button onclick="modoOscuro()">Modo oscuro 🌙</button>
-<button onclick="cambiarColor()">Cambiar color 🎨</button>
+        <p class="scroll">
+            Estudiante y futura desarrolladora de software 🚀
+        </p>
+
+        <p id="mensaje" class="scroll">
+            Estoy aprendiendo desarrollo web y me encanta 💖
+        </p>
+
+        <!-- BOTONES -->
+        <button onclick="saludar()">Presióname</button>
+        <button onclick="modoOscuro()">Modo oscuro 🌙</button>
+        <button onclick="cambiarColor()">Cambiar color 🎨</button>
+
     </div>
 
-    <!-- CONEXIÓN AL JAVASCRIPT -->
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
