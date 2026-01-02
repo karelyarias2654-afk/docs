@@ -57,6 +57,10 @@ button:hover {
 .dark button {
     background-color: #7e57c2;
 }
+.dark .contenedor {
+    background-color: #1e1e1e;
+}
+
 /* ===== CONTENEDOR CENTRAL ===== */
 .contenedor {
     background-color: white;
@@ -248,6 +252,7 @@ button:active {
     background: linear-gradient(135deg, #fce4ec, #e3f2fd, #f3e5f5);
     transition: background 0.6s ease;
 }
+
 
 
 
