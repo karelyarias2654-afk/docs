@@ -58,12 +58,16 @@ window.addEventListener("scroll", mostrarAlScroll);
 window.addEventListener("load", mostrarAlScroll);
 
 // ===== AUDIO AL HACER CLICK EN LA PÁGINA =====
-const audio = document.getElementById("audioMotor");
+window.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("audioMotor");
 
-document.addEventListener("click", () => {
-  audio.currentTime = 0; // reinicia el audio
-  audio.play();
+  document.addEventListener("click", () => {
+    audio.currentTime = 0; // reinicia el audio
+    audio.play();
+  });
 });
+
+
 
 
 
