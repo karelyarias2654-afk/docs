@@ -292,3 +292,20 @@ button:active {
     }
 }
 
+/* =============================== */
+/* BOTÓN WHATSAPP CON VIDA ❤️     */
+/* =============================== */
+
+.btn-whatsapp {
+    animation: latido 2.5s infinite;
+}
+
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
