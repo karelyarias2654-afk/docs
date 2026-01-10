@@ -360,6 +360,79 @@ button:active {
     font-weight: bold;
 }
 
+/* ============================= */
+/* ESTILO GENERAL DE LAS TARJETAS */
+/* ============================= */
+
+.card {
+  background: white;              /* Fondo blanco para que resalten */
+  border-radius: 20px;            /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra suave */
+  padding: 15px;                  /* Espacio interno */
+  transition:                     /* Animación suave */
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ================================= */
+/* EFECTO CUANDO PASAS EL MOUSE ARRIBA */
+/* ================================= */
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02); /* Se levanta y crece poquito */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25); /* Sombra más intensa */
+}
+
+/* ======================= */
+/* ESTILO DE LAS IMÁGENES  */
+/* ======================= */
+
+.card img {
+  border-radius: 15px;            /* Bordes suaves en imágenes */
+  transition: transform 0.4s ease; /* Animación suave */
+}
+
+/* EFECTO ZOOM EN IMAGEN */
+.card:hover img {
+  transform: scale(1.05);         /* Zoom ligero */
+}
+
+/* ============================ */
+/* BOTÓN DE WHATSAPP MEJORADO   */
+/* ============================ */
+
+.btn-whatsapp {
+  display: block;                /* Ocupa todo el ancho */
+  margin-top: 10px;              /* Separación del precio */
+  background: #25D366;           /* Verde WhatsApp */
+  color: white;                  /* Texto blanco */
+  text-align: center;            /* Texto centrado */
+  padding: 10px;                 /* Tamaño del botón */
+  border-radius: 12px;           /* Bordes redondeados */
+  font-weight: bold;             /* Texto en negritas */
+  text-decoration: none;         /* Quita subrayado */
+  transition:                    /* Animación suave */
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.btn-whatsapp:hover {
+  background: #1ebe5d;           /* Verde más oscuro */
+  transform: scale(1.05);        /* Crece ligeramente */
+}
+
+/* ============================ */
+/* TÍTULOS DE CADA SECCIÓN      */
+/* ============================ */
+
+.titulo-seccion {
+  text-align: center;            /* Centrado */
+  margin-bottom: 20px;           /* Espacio abajo */
+  font-size: 1.6em;              /* Tamaño grande */
+  color: #333;                   /* Color oscuro */
+}
+
 
 
 
