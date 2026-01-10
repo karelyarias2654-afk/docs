@@ -1,11 +1,18 @@
-/* ===== ESTILOS GENERALES ===== */
+/* ========================================= */
+/*        ESTILOS GENERALES DE LA PÁGINA      */
+/* ========================================= */
+
 body {
-    background-color: #fce4ec;
-    font-family: Arial, sans-serif;
+    background-color: #fce4ec;              /* Fondo rosa claro */
+    font-family: Arial, sans-serif;         /* Fuente limpia */
     text-align: center;
     margin-top: 80px;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease; /* Transición suave */
 }
+
+/* ========================================= */
+/*              TEXTOS GENERALES              */
+/* ========================================= */
 
 h1 {
     color: #ad1457;
@@ -20,6 +27,10 @@ p {
     font-size: 18px;
 }
 
+/* ========================================= */
+/*                 BOTONES                    */
+/* ========================================= */
+
 button {
     background-color: #ec407a;
     color: white;
@@ -29,17 +40,49 @@ button {
     border-radius: 8px;
     cursor: pointer;
     margin: 10px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
     background-color: #d81b60;
 }
 
-#mensaje {
-    transition: all 0.5s ease;
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* ===== MODO OSCURO ===== */
+/* ========================================= */
+/*            CONTENEDOR PRINCIPAL            */
+/* ========================================= */
+
+.contenedor {
+    background-color: white;
+    padding: 40px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: aparecer 0.8s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================= */
+/*               MODO OSCURO                  */
+/* ========================================= */
+
 .dark {
     background-color: #121212;
     color: #f5f5f5;
@@ -57,87 +100,137 @@ button:hover {
 .dark button {
     background-color: #7e57c2;
 }
+
 .dark .contenedor {
     background-color: #1e1e1e;
 }
 
-/* ===== CONTENEDOR CENTRAL ===== */
-.contenedor {
-    background-color: white;
-    padding: 40px;
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-/* ===== ANIMACIÓN DE ENTRADA ===== */
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ========================================= */
+/*           EFECTO COLOR MÁGICO              */
+/* ========================================= */
+
+.color-magico {
+    background: linear-gradient(135deg, #fce4ec, #e3f2fd, #f3e5f5);
+    transition: background 0.6s ease;
 }
 
-.contenedor {
-    animation: aparecer 0.8s ease-out;
-}
-/* ===== IMAGEN DE PERFIL ===== */
-.perfil {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 4px solid #ec407a;
-}
-/* ===== TEMA AZUL ===== */
-.tema-azul {
-    background-color: #e3f2fd;
+/* ========================================= */
+/*           ANIMACIÓN AL SCROLL              */
+/* ========================================= */
+
+.scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.tema-azul h1 {
-    color: #1565c0;
+.scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.tema-azul h2,
-.tema-azul p {
-    color: #1e88e5;
+/* ========================================= */
+/*           SECCIONES DE PRODUCTOS           */
+/* ========================================= */
+
+.titulo-seccion {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #ad1457;
 }
 
-.tema-azul button {
-    background-color: #42a5f5;
-}
-/* ===== ANIMACIONES ===== */
-button {
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+/* ========================================= */
+/*             GALERÍA DE PRODUCTOS           */
+/* ========================================= */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
 }
 
-button:active {
-    transform: scale(0.95);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+/* ========================================= */
+/*               TARJETA PRODUCTO             */
+/* ========================================= */
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: visible;
 }
 
-/* Mensaje con animación */
-.animar {
-    animation: pop 0.4s ease;
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
 }
 
-@keyframes pop {
-    0% {
-        transform: scale(0.9);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+/* ========================================= */
+/*             IMÁGENES DE PRODUCTO           */
+/* ========================================= */
+
+.card img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 10px;
+    transition: transform 0.4s ease;
 }
-/* ===== RESPONSIVE MÓVIL ===== */
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+/* ========================================= */
+/*          NOMBRE Y PRECIO PRODUCTO          */
+/* ========================================= */
+
+.nombre {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a1b9a;
+}
+
+.precio {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #388e3c;
+    font-weight: bold;
+}
+
+/* ========================================= */
+/*             BOTÓN WHATSAPP                 */
+/* ========================================= */
+
+.btn-whatsapp {
+    margin-top: 10px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+}
+
+/* ========================================= */
+/*              RESPONSIVE CELULAR            */
+/* ========================================= */
+
 @media (max-width: 600px) {
 
     body {
@@ -167,283 +260,11 @@ button:active {
         padding: 14px;
     }
 
-    .perfil {
-        width: 100px;
-        height: 100px;
-    }
-}
-/* ===== COLOR ALTERNATIVO TARJETA ===== */
-.color-magico {
-    background-color: #ffe0f0;
-}
-/* ===== ANIMACIÓN GALERÍA ===== */
-.galeria img {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: aparecer 0.8s ease forwards;
-}
-
-/* Delay diferente para cada imagen */
-.galeria img:nth-child(1) { animation-delay: 0.2s; }
-.galeria img:nth-child(2) { animation-delay: 0.4s; }
-.galeria img:nth-child(3) { animation-delay: 0.6s; }
-.galeria img:nth-child(4) { animation-delay: 0.8s; }
-
-/* ===== ANIMACIÓN SCROLL ===== */
-.scroll {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
-
-.scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* ===== EFECTO APARECER AL SCROLL ===== */
-.scroll {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* ===== EFECTO ZOOM EN IMÁGENES ===== */
-.zoom {
-    transition: transform 0.4s ease;
-}
-
-.card:hover .zoom {
-    transform: scale(1.25); /* 👈 zoom visible */
-}
-
-/* ===== GALERÍA DE IMÁGENES ===== */
-.titulo-galeria {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #ad1457;
-}
-
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 15px;
-}
-
-.galeria img {
-    width: 100%;
-    max-height: 200px;
-    height: auto;              /* 👈 clave para celular */
-    object-fit: contain;
-    background-color: #fff;
-    border-radius: 14px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    padding: 10px;
-}
-    
-/* ===== COLOR MÁGICO ===== */
-.color-magico {
-    background: linear-gradient(135deg, #fce4ec, #e3f2fd, #f3e5f5);
-    transition: background 0.6s ease;
-}
-
-/* ===== TARJETAS DE PRODUCTOS CON BOTÓN WHATSAPP ===== */
-.card {
-    background: white;
-    padding: 15px;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.btn-whatsapp {
-    margin-top: 10px;
-    background-color: #25D366;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.btn-whatsapp:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.05);
-}
-
-/* ===== EFECTO ZOOM AL PASAR EL MOUSE ===== */
-/* Permite que la imagen crezca sin cortarse */
-/* El zoom se activa al pasar el cursor sobre la tarjeta */
-.card {
-    overflow: visible;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-}
-
-.card:hover .zoom {
-    transform: scale(1.25);
-}
-
-.zoom {
-    transition: transform 0.4s ease;
-}
-
-@media (max-width: 600px) {
-    .galeria img {
-        max-height: 240px;
-        padding: 12px;
-    }
-}
-
-.card {
-    overflow: visible;
-}
-
-/* ===== GALERÍA EN UNA SOLA COLUMNA EN CELULAR ===== */
-@media (max-width: 600px) {
     .galeria {
-        grid-template-columns: 1fr; /* 👈 una sola imagen por fila */
+        grid-template-columns: 1fr; /* Una tarjeta por fila */
     }
 
-    .galeria img {
-        max-height: 260px; /* se ven más grandes */
+    .card img {
+        max-height: 280px;
     }
 }
-
-/* ===== FORZAR UNA SOLA COLUMNA EN CELULAR ===== */
-@media screen and (max-width: 768px) {
-    .galeria {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .galeria img {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        object-fit: contain;
-    }
-}
-
-.titulo-seccion {
-    margin-top: 50px;
-    margin-bottom: 25px;
-    font-size: 26px;
-    color: #ad1457;
-}
-
-.nombre {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #6a1b9a;
-}
-
-.precio {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #388e3c;
-    font-weight: bold;
-}
-
-/* ============================= */
-/* ESTILO GENERAL DE LAS TARJETAS */
-/* ============================= */
-
-.card {
-  background: white;              /* Fondo blanco para que resalten */
-  border-radius: 20px;            /* Bordes redondeados */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra suave */
-  padding: 15px;                  /* Espacio interno */
-  transition:                     /* Animación suave */
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-/* ================================= */
-/* EFECTO CUANDO PASAS EL MOUSE ARRIBA */
-/* ================================= */
-
-.card:hover {
-  transform: translateY(-8px) scale(1.02); /* Se levanta y crece poquito */
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25); /* Sombra más intensa */
-}
-
-/* ======================= */
-/* ESTILO DE LAS IMÁGENES  */
-/* ======================= */
-
-.card img {
-  border-radius: 15px;            /* Bordes suaves en imágenes */
-  transition: transform 0.4s ease; /* Animación suave */
-}
-
-/* EFECTO ZOOM EN IMAGEN */
-.card:hover img {
-  transform: scale(1.05);         /* Zoom ligero */
-}
-
-/* ============================ */
-/* BOTÓN DE WHATSAPP MEJORADO   */
-/* ============================ */
-
-.btn-whatsapp {
-  display: block;                /* Ocupa todo el ancho */
-  margin-top: 10px;              /* Separación del precio */
-  background: #25D366;           /* Verde WhatsApp */
-  color: white;                  /* Texto blanco */
-  text-align: center;            /* Texto centrado */
-  padding: 10px;                 /* Tamaño del botón */
-  border-radius: 12px;           /* Bordes redondeados */
-  font-weight: bold;             /* Texto en negritas */
-  text-decoration: none;         /* Quita subrayado */
-  transition:                    /* Animación suave */
-    background 0.3s ease,
-    transform 0.3s ease;
-}
-
-/* EFECTO AL PASAR EL MOUSE */
-.btn-whatsapp:hover {
-  background: #1ebe5d;           /* Verde más oscuro */
-  transform: scale(1.05);        /* Crece ligeramente */
-}
-
-/* ============================ */
-/* TÍTULOS DE CADA SECCIÓN      */
-/* ============================ */
-
-.titulo-seccion {
-  text-align: center;            /* Centrado */
-  margin-bottom: 20px;           /* Espacio abajo */
-  font-size: 1.6em;              /* Tamaño grande */
-  color: #333;                   /* Color oscuro */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
