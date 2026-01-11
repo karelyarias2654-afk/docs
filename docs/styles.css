@@ -310,3 +310,60 @@ button:active {
         #ffeb3b
     ) !important;
 }
+
+/* =============================== */
+/*        SECCIÓN EMOCIONAL ❤️     */
+/* =============================== */
+
+.mensaje-emocional {
+    margin-top: 60px;
+    padding: 30px;
+    background: linear-gradient(135deg, #fff3e0, #e3f2fd);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.mensaje-emocional h2 {
+    color: #d32f2f; /* rojo amor */
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.mensaje-emocional p {
+    font-size: 18px;
+    color: #424242;
+    line-height: 1.6;
+}
+
+.mensaje-emocional .firma {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f9a825; /* amarillo cálido */
+}
+
+/* =============================== */
+/*    WHATSAPP FLOTANTE 📲✨       */
+/* =============================== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: latido 2s infinite;
+    z-index: 999;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
