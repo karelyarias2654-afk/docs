@@ -388,4 +388,62 @@ button:active,
     transform: scale(0.97);
 }
 
+/* =============================== */
+/* MENSAJES EMOCIONALES            */
+/* =============================== */
+.mensaje-emocional {
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    animation: aparecer 1.2s ease;
+}
+
+.mensaje-emocional h2 {
+    margin-bottom: 10px;
+}
+
+.mensaje-emocional p {
+    font-size: 1.05em;
+}
+
+/* =============================== */
+/* CHICOS                          */
+/* =============================== */
+.mensaje-emocional.chicos {
+    background: linear-gradient(135deg, #d4fcd4, #9cff9c);
+    color: #145214;
+}
+
+/* =============================== */
+/* MEDIANOS                        */
+/* =============================== */
+.mensaje-emocional.medianos {
+    background: linear-gradient(135deg, #fff4c2, #ffd966);
+    color: #7a5a00;
+}
+
+/* =============================== */
+/* GRANDES                         */
+/* =============================== */
+.mensaje-emocional.grandes {
+    background: linear-gradient(135deg, #d6e6ff, #8bb6ff);
+    color: #0b2c5d;
+}
+
+/* =============================== */
+/* ANIMACIÓN                       */
+/* =============================== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
