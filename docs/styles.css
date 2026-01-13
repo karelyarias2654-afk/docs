@@ -446,4 +446,19 @@ button:active,
     }
 }
 
+/* =============================== */
+/* ANIMACIONES AL PASAR SECCIÓN ✨ */
+/* =============================== */
+
+.scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s ease;
+}
+
+.scroll.activo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
