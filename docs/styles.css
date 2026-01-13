@@ -478,4 +478,24 @@ button:active,
   transform: translateY(0) scale(1);
 }
 
+/* =============================== */
+/* ANIMACIÓN SCROLL CORREGIDA      */
+/* =============================== */
+
+.scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Para que NUNCA desaparezcan cosas */
+button, a, h1, h2, h3, p {
+  opacity: 1;
+}
+
 
