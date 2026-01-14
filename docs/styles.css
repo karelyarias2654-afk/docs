@@ -498,4 +498,92 @@ button, a, h1, h2, h3, p {
   opacity: 1;
 }
 
+/* ESTADO INICIAL */
+.scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== CHICOS ===== */
+.anim-chicos.show {
+  animation: chicosIn 0.8s ease forwards;
+}
+
+@keyframes chicosIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MEDIANOS ===== */
+.anim-medianos.show {
+  animation: medianosIn 0.8s ease forwards;
+}
+
+@keyframes medianosIn {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== GRANDES ===== */
+.anim-grandes.show {
+  animation: grandesIn 0.9s ease forwards;
+}
+
+@keyframes grandesIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== MENSAJES ===== */
+.anim-mensaje.show {
+  animation: mensajeIn 1s ease forwards;
+}
+
+@keyframes mensajeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== CARRITOS UNO POR UNO ===== */
+.anim-card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.anim-card.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
 
